@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button.js";
 
 const meta: Meta<typeof Button> = {
-  title: "components/buttons/button",
+  title: "components/button",
   component: Button,
 };
 
@@ -11,8 +11,10 @@ type Story = StoryObj<unknown>;
 
 export const Buttons: Story = {
   render: () => (
-    <div>
-      <Button />
+    <div style={{ display: "flex", gap: "24px" }}>
+      <Button variant="primary">primary button</Button>
+      <Button variant="secondary">secondary button</Button>
+      <Button variant="accent">accent button</Button>
     </div>
   ),
 };
