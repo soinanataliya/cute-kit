@@ -1,25 +1,39 @@
-import { ElementType, PropsWithChildren } from "react";
+import {
+  ButtonHTMLAttributes,
+  ElementType,
+  ForwardedRef,
+  PropsWithChildren,
+  forwardRef,
+} from "react";
 import "./button.css";
 import { cn } from "../../helpers/class-names";
 
-export interface ButtonProps {
-  variant?: "primary" | "secondary" | "accent";
+export type ButtonElement = "button" | "a";
+
+export interface ButtonProps<T>
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  as?: T;
+  variant?: "primary" | "secondary" | "accent" | "outline";
+  href?: string;
+  target?: string;
+  className?: string;
 }
 
-const Button = ({
-  children,
-  variant = "primary",
-}: PropsWithChildren<ButtonProps>) => {
-  const Btn = "button" as ElementType;
+const Button = <T extends ButtonElement = "button">(
+  props: PropsWithChildren<ButtonProps<T>>,
+  ref: ForwardedRef<HTMLElementTagNameMap>
+) => {
+  const Btn = props?.as ?? ("button" as ElementType);
 
-  // css modules
-  // a || button
-  // className
-  // ref
-  // ButtonHTMLAttributes
+  const { children, variant = "primary", className, ...rest } = props;
+
   // принимает любые чилдрены
 
-  return <Btn className={cn(`button ${variant}`)}>{children}</Btn>;
+  return (
+    <Btn ref={ref} className={cn(`button ${variant}`, className)} {...rest}>
+      {children}
+    </Btn>
+  );
 };
 
-export default Button;
+export default forwardRef(Button);

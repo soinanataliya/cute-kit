@@ -9,12 +9,34 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<unknown>;
 
-export const Buttons: Story = {
-  render: () => (
+function RenderedButtons() {
+  return (
     <div style={{ display: "flex", gap: "24px" }}>
-      <Button variant="primary">primary button</Button>
+      <Button as="a" variant="primary">
+        primary button
+      </Button>
       <Button variant="secondary">secondary button</Button>
       <Button variant="accent">accent button</Button>
+      <Button variant="outline">outline button</Button>
+    </div>
+  );
+}
+
+export const Buttons: Story = {
+  render: () => <RenderedButtons />,
+};
+
+export const Links: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: "24px" }}>
+      <Button
+        as="a"
+        variant="primary"
+        href="https://google.com"
+        target="_blank"
+      >
+        primary button link
+      </Button>
     </div>
   ),
 };

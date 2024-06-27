@@ -1,23 +1,43 @@
 .button {
   border-width: 0;
-  border-radius: 6px;
+  border-radius: 26px;
   cursor: pointer;
   font-weight: 500;
-  padding: 12px 20px;
+  padding: 16px 24px;
   font-size: 16px;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:disabled {
+    filter: brightness(0.7);
+  }
+  &:focus {
+    outline: 2;
+    outline-color: var(--color-extra2);
+  }
 }
 
 .primary {
-  color: var(--color-extra1);
+  color: white;
   background-color: var(--color-primary);
 }
 
 .secondary {
-  color: var(--color-extra1);
+  color: white;
   background-color: var(--color-secondary);
 }
 
 .accent {
-  color: var(--color-extra1);
+  color: white;
   background-color: var(--color-accent);
+}
+
+.outline {
+  background-color: transparent;
+  border: 2px var(--color-accent) solid;
+  color: var(--color-accent);
 }
