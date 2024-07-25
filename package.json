@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.20",
     "@storybook/builder-vite": "^8.1.5",
     "@storybook/cli": "^8.1.5",
     "@storybook/react-vite": "^8.1.5",

@@ -1,0 +1,7 @@
+.modal-overlay {
+  z-index: 1;
+  display: grid;
+  backdrop-filter: blur(0.8rem);
+  background: rgba(242, 160, 255, 0.085);
+  place-items: center;
+}

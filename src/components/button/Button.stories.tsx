@@ -12,9 +12,7 @@ type Story = StoryObj<unknown>;
 function RenderedButtons() {
   return (
     <div style={{ display: "flex", gap: "24px" }}>
-      <Button as="a" variant="primary">
-        primary button
-      </Button>
+      <Button variant="primary">primary button</Button>
       <Button variant="secondary">secondary button</Button>
       <Button variant="accent">accent button</Button>
       <Button variant="outline">outline button</Button>
