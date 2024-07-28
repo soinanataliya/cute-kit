@@ -1,0 +1,11 @@
+.spinners-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.spinners-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}

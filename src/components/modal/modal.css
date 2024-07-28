@@ -5,3 +5,7 @@
   background: rgba(242, 160, 255, 0.085);
   place-items: center;
 }
+
+.modal-wrapper-text {
+  margin-bottom: 24px;
+}

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Modal from "./Modal.js";
 import Button from "../button/Button.js";
 import { useCallback, useState } from "react";
+import "./modal.stories.css";
 
 const meta: Meta<typeof Modal> = {
   title: "components/modal",
@@ -29,9 +30,13 @@ export const Modals: Story = {
           Open modal
         </Button>
         <Modal open={open}>
-          <Button variant="primary" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="modal-wrapper">
+            <h2>Modal</h2>
+            <p className="modal-wrapper-text">Lorem ipsum dolor sit amet.</p>
+            <Button variant="primary" onClick={handleClose}>
+              Close
+            </Button>
+          </div>
         </Modal>
       </div>
     );

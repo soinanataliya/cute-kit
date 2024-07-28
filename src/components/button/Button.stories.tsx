@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button.js";
+import "./button.stories.css";
 
 const meta: Meta<typeof Button> = {
   title: "components/button",
@@ -11,7 +12,7 @@ type Story = StoryObj<unknown>;
 
 function RenderedButtons() {
   return (
-    <div style={{ display: "flex", gap: "24px" }}>
+    <div className="buttons-wrapper">
       <Button variant="primary">primary button</Button>
       <Button variant="secondary">secondary button</Button>
       <Button variant="accent">accent button</Button>
@@ -26,7 +27,7 @@ export const Buttons: Story = {
 
 export const Links: Story = {
   render: () => (
-    <div style={{ display: "flex", gap: "24px" }}>
+    <div className='buttons-wrapper'>
       <Button
         as="a"
         variant="primary"

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Spinner from "./Spinner.js";
+import "./spinner.stories.css";
 
 const meta: Meta<typeof Spinner> = {
   title: "components/spinner",
@@ -11,35 +12,14 @@ type Story = StoryObj<unknown>;
 
 export const Spinners: Story = {
   render: () => (
-    <div style={{ display: "flex", gap: "36px", alignItems: "center" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-        }}
-      >
+    <div className="spinners-wrapper">
+      <div className="spinners-item">
         <Spinner size="s" />S
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-        }}
-      >
+      <div className="spinners-item">
         <Spinner size="m" />M
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-        }}
-      >
+      <div className="spinners-item">
         <Spinner size="l" />L
       </div>
     </div>
