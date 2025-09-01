@@ -2,6 +2,10 @@
   --color-primary: #d48fbb;
   --color-secondary: #f49db5;
   --color-accent: #f55c96;
-  --color-extra1: #F1D0F0;
+  --color-extra1: #f1d0f0;
   --color-extra2: #9e052b;
+
+  --font-size-main: 16px;
+  --font-size-s: 14px;
+  --font-size-xs: 12px;
 }

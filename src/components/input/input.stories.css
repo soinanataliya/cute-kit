@@ -1,0 +1,14 @@
+.inputs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.uncontrolled-example {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 2px var(--color-extra1) solid;
+  padding: 12px;
+  border-radius: 26px;
+}
