@@ -1,10 +1,8 @@
-.button {
+.button-element {
   border-width: 0;
   border-radius: 26px;
   cursor: pointer;
   font-weight: 500;
-  padding: 16px 24px;
-  font-size: 16px;
   white-space: nowrap;
   text-decoration: none;
 
@@ -18,6 +16,10 @@
   &:focus {
     outline: 2;
     outline-color: var(--color-extra2);
+  }
+  &:active {
+    position: relative;
+    top: 1px;
   }
 }
 
@@ -40,4 +42,19 @@
   background-color: transparent;
   border: 2px var(--color-accent) solid;
   color: var(--color-accent);
+}
+
+.button-s {
+  font-size: var(--font-size-s);
+  padding: 8px 12px;
+}
+
+.button-m {
+  font-size: var(--font-size-main);
+  padding: 16px 24px;
+}
+
+.button-l {
+  font-size: var(--font-size-l);
+  padding: 18px 28px;
 }

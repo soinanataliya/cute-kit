@@ -17,6 +17,8 @@ function RenderedButtons() {
       <Button variant="secondary">secondary button</Button>
       <Button variant="accent">accent button</Button>
       <Button variant="outline">outline button</Button>
+      <Button variant="primary" size="s">small button</Button>
+      <Button variant="primary" size="l">large button</Button>
     </div>
   );
 }

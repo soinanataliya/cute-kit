@@ -15,6 +15,7 @@ export interface ButtonProps<T>
   as?: T;
   variant?: "primary" | "secondary" | "accent" | "outline";
   href?: string;
+  size?: "s" | "m" | "l";
   target?: string;
   className?: string;
 }
@@ -25,12 +26,20 @@ const Button = <T extends ButtonElement = "button">(
 ) => {
   const Btn = props?.as ?? ("button" as ElementType);
 
-  const { children, variant = "primary", className, ...rest } = props;
-
-  // принимает любые чилдрены
+  const {
+    children,
+    variant = "primary",
+    className,
+    size = "m",
+    ...rest
+  } = props;
 
   return (
-    <Btn ref={ref} className={cn(`button ${variant}`, className)} {...rest}>
+    <Btn
+      ref={ref}
+      className={cn(`button-element ${variant}`, `button-${size}`, className)}
+      {...rest}
+    >
       {children}
     </Btn>
   );

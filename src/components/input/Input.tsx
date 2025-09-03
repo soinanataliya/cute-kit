@@ -8,14 +8,13 @@ import {
 import "./input.css";
 import { cn } from "../../helpers/class-names";
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "prefix" | "postfix"> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   helperText?: string;
   error?: boolean;
   inputPrefix?: React.ReactNode;
   inputPostfix?: React.ReactNode;
-  // size?
+  inputSize?: "s" | "m" | "l";
   className?: string;
 }
 
@@ -32,6 +31,7 @@ const Input = (
     inputPostfix,
     className,
     defaultValue,
+    inputSize = "m",
     onChange,
     ...rest
   } = props;
@@ -56,7 +56,7 @@ const Input = (
       <div
         className={cn(
           "input-container",
-          // `input-${size}`,
+          `input-${inputSize}`,
           error && "input-error",
           className
         )}

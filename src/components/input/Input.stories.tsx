@@ -40,6 +40,8 @@ function RenderedInputs() {
       <Input label="Error state" helperText="Fix error" error />
       <Input label="Prefix" inputPrefix={<Spinner size="m" />} />
       <Input label="Postfix" inputPostfix="$" />
+      <Input label="Small" inputSize='s' />
+      <Input label="Large" inputSize='l' />
     </div>
   );
 }

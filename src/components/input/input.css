@@ -61,3 +61,19 @@
   font-size: 18px;
   color: var(--color-secondary);
 }
+
+.input-s .input-element {
+  font-size: var(--font-size-s);
+  padding: 2px 0;
+}
+
+.input-m .input-element {
+  font-size: var(--font-size-main);
+  padding: 4px 0;
+}
+
+
+.input-l .input-element {
+  font-size: var(--font-size-l);
+  padding: 8px 0;
+}
