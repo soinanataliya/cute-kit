@@ -28,7 +28,7 @@ function RenderedInputs() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <div className="uncontrolled-example">
+      <div className="input-uncontrolled-example">
         <Input
           ref={inputRef}
           label="Uncontrolled input"
